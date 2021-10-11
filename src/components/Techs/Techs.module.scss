@@ -1,0 +1,121 @@
+$techs-bcolor: #202020;
+$techs-bcolor-min768: #272727;
+$item-bcolor: #303030;
+
+.techs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $techs-bcolor;
+}
+
+.content {
+  width: calc(100% - 2 * 18px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 70px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subtitle {
+  font-size: 30px;
+  line-height: 36px;
+  margin: 60px 0 24px;
+  padding: 0;
+  letter-spacing: -0.04em;
+}
+
+.text {
+  font-size: 11px;
+  line-height: 16px;
+  margin: 0 0 50px;
+  padding: 0;
+  letter-spacing: -0.04em;
+  text-align: center;
+}
+
+.itemList {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 84px);
+  gap: 10px;
+  justify-content: center;
+  align-content: center;
+  margin: 0 53px;
+}
+
+.item {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 84px;
+  height: 57px;
+  background-color: $item-bcolor;
+  border-radius: 10px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.04em;
+}
+
+@media screen and (min-width: 768px) {
+  .techs {
+    background-color: $techs-bcolor-min768;
+  }
+  .content {
+    width: calc(100% - 2 * 50px);
+    padding-bottom: 90px;
+  }
+
+  .itemList {
+    margin: 0 5px;
+  }
+
+  .subtitle {
+    font-size: 50px;
+    line-height: 58px;
+    text-align: center;
+    margin: 80px 0 22px;
+  }
+
+  .text {
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    margin-bottom: 83px;
+    max-width: 460px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .content {
+    width: calc(100% - 2 * 70px);
+    padding-bottom: 100px;
+  }
+
+  .subtitle {
+    margin: 90px 0 26px;
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 100px;
+  }
+  .item {
+    width: 90px;
+    height: 60px;
+  }
+
+  .itemList {
+    grid-template-columns: repeat(auto-fit, 90px);
+  }
+}

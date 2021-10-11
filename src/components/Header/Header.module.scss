@@ -1,0 +1,164 @@
+$header-green-bcolor: #073042;
+$login-bcolor: #3ddc84;
+$login-boxshadow-bcolor: rgba(0, 0, 0, 0.25);
+$link-color: white;
+
+.header {
+  display: flex;
+  padding: 18px 0;
+  justify-content: center;
+  width: 100%;
+}
+
+.header_green {
+  background-color: $header-green-bcolor;
+}
+
+.content {
+  width: calc(100% - 2 * 14px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkRegistration {
+  text-decoration: none;
+  color: $link-color;
+  margin-right: 14px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 16px;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.linkRegistration:hover {
+  opacity: 0.5;
+}
+
+.linkLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 16px;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 3px;
+  background-color: $login-bcolor;
+  width: 54px;
+  height: 26px;
+  box-shadow: 0px 4px 4px $login-boxshadow-bcolor;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.linkLogin:hover {
+  opacity: 0.5;
+}
+
+.movieContainer {
+  display: none;
+}
+
+.linkMovie {
+  text-decoration: none;
+  color: $link-color;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0px 16px 0px 0px;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.linkMovie:hover {
+  opacity: 0.5;
+}
+
+.linkMovie:last-of-type {
+  margin-right: 0;
+}
+
+.linkAccount {
+  background-image: url(../../images/nav_profile.svg);
+  background-size: cover;
+  background-color: transparent;
+  width: 100px;
+  height: 30px;
+  display: none;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.linkAccount:hover {
+  opacity: 0.5;
+}
+
+.menuButton {
+  background-image: url(../../images/menu_button.svg);
+  background-size: 40px 43px;
+  background-repeat: no-repeat;
+  background-color: inherit;
+  background-position: center center;
+  margin: 0;
+  padding: 0;
+  width: 43px;
+  height: 40px;
+  border: none;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.menuButton:hover {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    width: calc(100% - 2 * 30px);
+  }
+
+  .menuButton {
+    background-size: 44px 44px;
+  }
+
+  .linkLogin {
+    width: 76px;
+    height: 32px;
+  }
+  .linkRegistration {
+    font-size: 12px;
+    line-height: 16px;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .linkAccount {
+    display: flex;
+  }
+  .movieContainer {
+    display: flex;
+  }
+
+  .menuButton {
+    display: none;
+  }
+
+  .content {
+    width: calc(100% - 2 * 70px);
+  }
+}
+
+.invisible {
+  display: none;
+}

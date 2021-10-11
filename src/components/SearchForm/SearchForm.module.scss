@@ -1,0 +1,169 @@
+$searchform-bottom-color: #424242;
+$form-bcolor: #2f2f2f;
+$input-bcolor: #2f2f2f;
+$inputError-color: red;
+$label-border-color: #424242;
+
+.searchform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0 109px;
+  width: 100%;
+  border-bottom: 1px solid $searchform-bottom-color;
+}
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: $form-bcolor;
+  height: 72px;
+  border-radius: 9px;
+}
+
+.input {
+  border: none;
+  font-size: 14px;
+  line-height: 17px;
+  background-color: $input-bcolor;
+  padding: 0;
+  width: 150px;
+}
+
+.button {
+  background-image: url(../../images/search_button.svg);
+  background-size: cover;
+  background-color: transparent;
+  width: 80px;
+  height: 34px;
+  border: none;
+  box-sizing: border-box;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.button:hover {
+  opacity: 0.5;
+}
+
+.button_disabled {
+  opacity: 0.3;
+}
+
+.label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+  margin: 46px 0 0;
+  max-width: 197px;
+}
+
+.invisibleCheckbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.searchImage {
+  display: none;
+}
+
+.visibleCheckbox {
+  display: inline-block;
+  flex-wrap: wrap;
+  vertical-align: middle;
+  width: 36px;
+  height: 20px;
+  background-image: url("../../images/smalltumboff.svg");
+  margin-right: 13px;
+}
+
+.invisibleCheckbox:checked + .visibleCheckbox {
+  background-image: url("../../images/smalltumb.svg");
+}
+
+.container {
+  margin-top: 0;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 19px;
+}
+
+.labelText {
+  font-size: 11px;
+  line-height: 18px;
+}
+
+.inputContainer {
+  display: flex;
+}
+
+.inputError {
+  color: $inputError-color;
+  margin: 10px 0 0;
+}
+
+.inputError_invisible {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    display: grid;
+    grid-template-columns: minmax(460px, 913px) minmax(207px, 1fr);
+    gap: 0;
+  }
+
+  .label {
+    margin: 0;
+    height: 40px;
+    border-left: 1px solid $label-border-color;
+    padding-left: 19px;
+  }
+
+  .input {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .input {
+    margin: 0;
+  }
+  .container {
+    margin: 0 19px;
+  }
+
+  .labelText {
+    font-weight: 400px;
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .searchImage {
+    display: block;
+    height: 34px;
+    width: 34px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .label {
+    padding-left: 29px;
+  }
+  .searchform {
+    padding: 70px 0 69px;
+  }
+
+  .container {
+    margin-left: 19px;
+  }
+}

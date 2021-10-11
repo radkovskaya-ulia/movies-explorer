@@ -1,0 +1,25 @@
+$sectionTitle-bottom-color: #dadada;
+
+.sectionTitle {
+  padding: 70px 0 28px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.78px;
+  letter-spacing: -0.04em;
+  margin: 0;
+  border-bottom: 1px solid $sectionTitle-bottom-color;
+}
+
+@media screen and (min-width: 768px) {
+  .sectionTitle {
+    padding: 90px 0 23px;
+    font-size: 22px;
+    line-height: 27px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .sectionTitle {
+    padding: 110px 0 23px;
+  }
+}

@@ -1,0 +1,23 @@
+$page-bcolor: #202020;
+$page-color: #fff;
+
+.page {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  background-color: $page-bcolor;
+  color: $page-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  width: 100%;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1280px;
+  min-width: 320px;
+  min-height: 100vh;
+}

@@ -1,0 +1,156 @@
+$project-bcolor: #202020;
+$block-bcolor: #303030;
+$block-first-bcolor: #3ddc84;
+$block-first-color: black;
+$blockComment-bcolor: #a0a0a0;
+
+.project {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $project-bcolor;
+}
+
+.content {
+  width: calc(100% - 2 * 18px);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 70px;
+}
+
+.infoContainer {
+  margin: 60px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.textContainer {
+  margin-bottom: 56px;
+}
+
+.textContainer:last-of-type {
+  margin-bottom: 0;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.04em;
+  margin: 0 0 16px;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  margin: 0;
+}
+
+.blockContainer {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(100px, 140px) minmax(184px, 528px);
+  align-self: center;
+  justify-self: center;
+}
+
+.block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  background: $block-bcolor;
+}
+
+.block:first-child {
+  width: 100%;
+  background-color: $block-first-bcolor;
+  color: $block-first-color;
+}
+
+.blockComment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  line-height: 13px;
+  margin-top: 10px;
+  color: $blockComment-bcolor;
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    width: calc(100% - 2 * 50px);
+    padding-bottom: 90px;
+  }
+  .infoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 70px 0 93px;
+  }
+  .textContainer {
+    max-width: 319px;
+    margin: 0;
+  }
+
+  .blockContainer {
+    grid-template-columns: minmax(140px, 228px) minmax(528px, 1fr);
+  }
+
+  .subtitle {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 22px;
+  }
+
+  .text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .block {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .blockComment {
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 14px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .textContainer {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .content {
+    width: calc(100% - 2 * 70px);
+    padding-bottom: 110px;
+  }
+  .infoContainer {
+    margin-bottom: 110px;
+  }
+
+  .textContainer {
+    max-width: 550px;
+  }
+  .subtitle {
+    margin-bottom: 26px;
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

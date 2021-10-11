@@ -1,0 +1,67 @@
+$moreButton-bcolor: #2f2f2f;
+
+.cardList {
+  padding-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cardList_invisible {
+  display: none;
+}
+
+.itemList {
+  width: 100%;
+  margin: 0;
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 339px));
+  padding: 0;
+  justify-content: center;
+  gap: 34px;
+}
+
+.moreButton {
+  background-color: $moreButton-bcolor;
+  border: none;
+  width: 100%;
+  height: 36px;
+  cursor: pointer;
+  border-radius: 6px;
+  color: white;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 50px 0 80px;
+  padding: 0;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.moreButton:hover {
+  opacity: 0.5;
+}
+
+.moreButton_invisible {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .item-list {
+    gap: 30px;
+  }
+  .card-list {
+    padding-top: 80px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .itemList {
+    grid-template-columns: repeat(4, 270px);
+    column-gap: 20px;
+    row-gap: 38px;
+  }
+}

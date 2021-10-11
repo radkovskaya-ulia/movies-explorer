@@ -1,0 +1,122 @@
+$label-color: #8b8b8b;
+$input-bcolor: #2f2f2f;
+$error-color: red;
+$button-bcolor: #4285f4;
+$button-color: white;
+$buttton-disabled-bcolor: slategrey;
+$link-color: #4285f4;
+
+.auth {
+  height: 100vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formTitle {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 50px 0 80px;
+}
+
+.formLabel {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  line-height: 12px;
+  max-width: 396px;
+  min-width: 260px;
+  color: $label-color;
+  margin: 0 0 10px;
+}
+
+.formInput {
+  border: none;
+  background-color: $input-bcolor;
+  border-radius: 8px;
+  height: 46px;
+  width: 260px;
+  margin: 10px 0 10px;
+}
+
+.error {
+  font-size: 10px;
+  line-height: 12px;
+  color: $error-color;
+}
+
+.errorInvisible {
+  display: None;
+}
+
+.button {
+  width: 260px;
+  height: 45px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  background-color: $button-bcolor;
+  color: $button-color;
+  border: none;
+  border-radius: 3px;
+  padding: 0;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.button_disabled {
+  background-color: $buttton-disabled-bcolor;
+}
+
+.button:hover {
+  opacity: 0.5;
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.text {
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0 7px 0 0;
+}
+
+.link {
+  margin: 0;
+  text-decoration: none;
+  color: $link-color;
+  font-size: 12px;
+  line-height: 15px;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.link:hover {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  .formInput {
+    width: 396px;
+  }
+
+  .formTitle {
+    margin: 40px 0 40px;
+  }
+
+  .form {
+    align-items: flex-start;
+  }
+
+  .button {
+    width: 396px;
+  }
+}

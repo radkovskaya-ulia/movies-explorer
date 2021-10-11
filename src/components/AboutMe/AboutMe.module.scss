@@ -1,0 +1,151 @@
+$author-bcolor: #202020;
+
+.author {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $author-bcolor;
+}
+
+.content {
+  width: calc(100% - 2 * 14px);
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContainer {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  margin-top: 40px;
+}
+
+.photo {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  width: 292px;
+  height: 352px;
+}
+
+.name {
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0;
+  letter-spacing: -0.04em;
+}
+
+.bio {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  margin: 20px 0;
+}
+
+.text {
+  font-size: 11px;
+  line-height: 16px;
+  margin: 0 0 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0 26px 0 0;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.link:hover {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    width: calc(100% - 2 * 50px);
+  }
+
+  .mainContainer {
+    margin-top: 66px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .textContainer {
+    max-width: 364px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .photo {
+    width: 255px;
+    height: 307px;
+  }
+
+  .name {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .bio {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 16px 0 20px;
+  }
+
+  .text {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  .link {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .content {
+    width: calc(100% - 2 * 70px);
+  }
+
+  .textContainer {
+    max-width: 600px;
+  }
+
+  .photo {
+    width: 270px;
+    height: 327px;
+  }
+
+  .name {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .bio {
+    font-size: 18px;
+    line-height: 20px;
+    margin: 18px 0 26px;
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
