@@ -4,9 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import styles from "./Header.module.scss";
 import Logo from "../Logo/Logo";
-import {
-  setIsNagitionOpen
-}  from "../../reducers/popupDataSlice";
+import { setIsNagitionOpen } from "../../reducers/popupDataSlice";
 
 function Header() {
   const dispatch = useDispatch();
@@ -16,7 +14,7 @@ function Header() {
 
   const handleNavigationClick = () => {
     dispatch(setIsNagitionOpen(true));
-  }
+  };
 
   return (
     <div

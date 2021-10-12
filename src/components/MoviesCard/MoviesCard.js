@@ -1,6 +1,7 @@
 import React from "react";
-import styles from "./MoviesCard.module.scss";
 import { useRouteMatch } from "react-router-dom";
+
+import styles from "./MoviesCard.module.scss";
 
 function MoviesCard({ card, onLikeClick, savedCards }) {
   const isMovies = useRouteMatch({ path: "/movies", exact: true });

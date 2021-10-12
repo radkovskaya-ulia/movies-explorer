@@ -35,7 +35,7 @@ const moviesDataSlice = createSlice({
     setInfoMoviesMessage(state, action) {
       state.infoMoviesMessage = action.payload;
     },
-    setInfoSavedMoviesMessage(state, action){
+    setInfoSavedMoviesMessage(state, action) {
       state.infoSavedMoviesMessage = action.payload;
     },
     setErrorMoviesMessage(state, action) {

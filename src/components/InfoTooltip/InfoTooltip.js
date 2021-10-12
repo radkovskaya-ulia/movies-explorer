@@ -1,9 +1,22 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 import styles from "./InfoTooltip.module.scss";
+import { setIsisInfoTooltipOpen } from "../../reducers/popupDataSlice";
 
-function InfoTooltip({ isOpen, onClose, infoProfileMessage }) {
-  const openClass = isOpen && "popup_visible";
+function InfoTooltip() {
+  const dispatch = useDispatch();
+  const infoEditProfileMessage = useSelector(
+    (state) => state.userData.infoEditProfileMessage
+  );
+  const isInfoTooltipOpen = useSelector(
+    (state) => state.popupData.isInfoTooltipOpen
+  );
+  const openClass = isInfoTooltipOpen && "popup_visible";
+
+  const onClose = () => {
+    dispatch(setIsisInfoTooltipOpen(false));
+  };
 
   return (
     <div className={`${styles.popup} ${openClass}`}>
@@ -14,7 +27,7 @@ function InfoTooltip({ isOpen, onClose, infoProfileMessage }) {
           className={styles.closeButton}
         ></button>
         <div className={styles.container}>
-          <p className={styles.infoText}>{infoProfileMessage}</p>
+          <p className={styles.infoText}>{infoEditProfileMessage}</p>
         </div>
       </div>
     </div>

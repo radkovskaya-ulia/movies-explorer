@@ -8,6 +8,13 @@ import { setNumCards } from "../../reducers/moviesDataSlice";
 
 function MoviesCardList({ cards, savedCards, onLikeClick }) {
   const dispatch = useDispatch();
+
+  const numCards = useSelector((state) => state.moviesData.numCards);
+  const width = useSelector((state) => state.moviesData.width);
+
+  const downloadAllCard = cards.length <= numCards;
+  const isMovies = useRouteMatch({ path: "/movies", exact: true });
+
   const handleShowMoreCards = () => {
     if (width < 1280) {
       dispatch(setNumCards(numCards + 2));
@@ -15,12 +22,6 @@ function MoviesCardList({ cards, savedCards, onLikeClick }) {
       dispatch(setNumCards(numCards + 4));
     }
   };
-
-  const numCards = useSelector((state) => state.moviesData.numCards);
-  const width = useSelector((state) => state.moviesData.width);
-
-  const downloadAllCard = cards.length <= numCards;
-  const isMovies = useRouteMatch({ path: "/movies", exact: true });
 
   return (
     <section className={styles.cardList}>

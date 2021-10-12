@@ -17,11 +17,7 @@ function Portfolio() {
           >
             Статичный сайт
           </a>
-          <img
-            className={styles.image}
-            src={row}
-            alt="Изображение стрелки."
-          />
+          <img className={styles.image} src={row} alt="Изображение стрелки." />
         </div>
         <div className={styles.container}>
           <a
@@ -32,11 +28,7 @@ function Portfolio() {
           >
             Адаптивный сайт
           </a>
-          <img
-            className={styles.image}
-            src={row}
-            alt="Изображение стрелки."
-          />
+          <img className={styles.image} src={row} alt="Изображение стрелки." />
         </div>
         <div className={styles.container}>
           <a
@@ -47,11 +39,7 @@ function Portfolio() {
           >
             Одностраничное приложение
           </a>
-          <img
-            className={styles.image}
-            src={row}
-            alt="Изображение стрелки."
-          />
+          <img className={styles.image} src={row} alt="Изображение стрелки." />
         </div>
       </div>
     </section>
